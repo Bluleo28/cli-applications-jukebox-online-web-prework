@@ -1,4 +1,5 @@
 expect { help } .to output(/^(?=.*help) (?=.*list) ?=.*play) (?+.*exit).+/m) .to_stdout
 expect { play(songs) } .to output(/Phoenix - 1901/) .to_stdout
 expect { play(songs) } .to_output(/Phoenix - 1901/) .to_stdout
-expect { play(songs) } .to output(/Phoenix - )
+expect { play(songs) } .to output(/Invalid input, please try again/) .to_stdout
+
